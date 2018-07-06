@@ -1,0 +1,17 @@
+<div style="margin-top: 70px;">
+  <div class="container">
+    <div class="row">
+      <h1 class="text-center">{{ greeting }}</h1>
+    </div>
+    <div class="row">
+      <p class="text-center">{{ introduction }}</p>
+    </div>
+    <div class="row">
+      <h1>{{ text }}</h1>
+      <input type="text" [(ngModel)]="text">
+    </div>
+    <ul>
+      <li *ngFor="let item of list">{{ item }}</li>
+    </ul>
+  </div>
+</div>
