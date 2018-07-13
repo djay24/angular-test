@@ -1,0 +1,18 @@
+<div class="container" style="margin-top: 50px;">
+  <div class="row">
+    <h1 class="text-center">Todo List</h1>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let todo of todos">
+      {{todo.task}}
+    </li>
+  </ul>
+
+  <form action="POST" (ngSubmit)="addTodo()">
+    <div class="form-group">
+      <label for="task">Task</label>
+      <input type="text" class="form-control" id="task" name="task" placeholder="Task" [(ngModel)]="newTask.task">
+    </div>
+    <button class="btn btn-success">Add</button>
+  </form>
+</div>
