@@ -27,6 +27,7 @@ export class ContactComponent implements OnInit {
     this.newContact.id = last.id + 1;
     this.contacts.push(this.newContact);
     this.newContact = new Contact();
+    
   }
 
   ngOnInit() {
