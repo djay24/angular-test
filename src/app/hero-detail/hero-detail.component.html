@@ -1,5 +1,72 @@
 <div class="container" style="margin-top: 70px;">
   <div class="row">
-    <h1 class="text-center">{{hero.name}}</h1>
+    <h1 class="text-center">
+      {{hero.name}}
+      <span *ngIf="hero.hero">(Hero)</span>
+      <span *ngIf="!hero.hero">(Villian)</span>
+     </h1>
+     <div class="col-md-offset-11">
+       <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-warning">
+         <i class="fas fa-edit"></i>
+       </button>
+     </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <img src="{{hero.img}}" alt="hero.name" class="img-responsive">
+    </div>
+    <div class="col-md-8">
+      <h3 class="text-center">Alter: {{hero.alter}}</h3>
+      <p class="text-center">Bio: {{hero.bio}}</p>
+      <h2 class="text-center">Powers</h2>
+      <ul class="list-group">
+        <ng-container *ngFor="let power of hero.powers">
+          <li class="list-group-item">{{power}}</li>
+        </ng-container>
+      </ul>
+      <form action="POST" (ngSubmit)="addPower()">
+        <div class="form-group">
+          <label for="power">New Power</label>
+          <input type="text" id="power" name="power" class="form-control" placeholder="Power" [(ngModel)]="newPower">
+        </div>
+        <button class="btn btn-success">Add</button>
+      </form>
+    </div>
   </div>
 </div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Edit</h4>
+        </div>
+        <div class="modal-body">
+          <form action="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" value="{{hero.name}}" class="form-control" [(ngModel)]="hero.name">
+            </div>
+            <div class="form-group">
+              <label for="alter">Alter</label>
+              <input type="text" name="alter" id="alter" value="{{hero.alter}}" class="form-control" [(ngModel)]="hero.alter">
+            </div>
+            <div class="form-group">
+              <label for="bio">Bio</label>
+              <input type="text"  name="bio" id="bio" value="{{hero.bio}}" class="form-control" [(ngModel)]="hero.bio" >
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="hero" [value]="true" [(ngModel)]="hero.hero" >Hero</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="optradio" name="hero" [value]="false" [(ngModel)]="hero.hero">Villain</label>
+              </div>
+              <button class="btn btn-success" data-dismiss="modal" >Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
