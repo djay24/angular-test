@@ -1,5 +1,12 @@
-<div style="margin-top: 70px; ">
+<div style="margin-top: 70px;">
   <div class="container">
     <h1 class="text-center">Amiibos</h1>
+    <div class="col-md-3" *ngFor="let amiibo of amiibos" >
+     <div class="amiibo-body">
+      <h3 class="text-center">{{amiibo.name}}</h3>
+      <p class="text-center" >From: {{amiibo.gameSeries}}</p>
+      <button class="btn btn-info">View</button>
+     </div>
+    </div>
   </div>
 </div>
