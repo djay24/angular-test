@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { TodoComponent } from './todo/todo.component';
 import { HeroComponent } from './hero/hero.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { AmiibosComponent } from './amiibos/amiibos.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     ContactComponent,
     TodoComponent,
     HeroComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    AmiibosComponent
   ],
   imports: [
     BrowserModule,

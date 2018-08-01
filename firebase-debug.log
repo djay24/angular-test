@@ -1,0 +1,41 @@
+[debug] [2018-08-01T01:02:52.152Z] ----------------------------------------------------------------------
+[debug] [2018-08-01T01:02:52.155Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-08-01T01:02:52.155Z] CLI Version:   4.0.0
+[debug] [2018-08-01T01:02:52.155Z] Platform:      darwin
+[debug] [2018-08-01T01:02:52.155Z] Node Version:  v8.11.3
+[debug] [2018-08-01T01:02:52.155Z] Time:          Tue Jul 31 2018 18:02:52 GMT-0700 (PDT)
+[debug] [2018-08-01T01:02:52.155Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-08-01T01:02:52.182Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-08-01T01:02:52.182Z] > authorizing via signed-in user
+[debug] [2018-08-01T01:02:52.184Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-08-01T01:02:52.184Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/cGZPz6Z2ospkFHEdraGe8jIoa8hvlFFCtRf4QjTeeVo',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue Jul 31 2018 18:02:52 GMT-0700 (PDT)
+[debug] [2018-08-01T01:02:52.445Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-01T01:02:52.465Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/angular-test-3a793  
+  
+ Tue Jul 31 2018 18:02:52 GMT-0700 (PDT)
+[debug] [2018-08-01T01:02:52.847Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-01T01:02:52.849Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/angular-test-3a793/tokens  
+  
+ Tue Jul 31 2018 18:02:52 GMT-0700 (PDT)
+[debug] [2018-08-01T01:02:53.248Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-01T01:02:53.251Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/angular-test-3a793  
+  
+ Tue Jul 31 2018 18:02:53 GMT-0700 (PDT)
+[debug] [2018-08-01T01:02:53.884Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/djrodriguez/Desktop/angular-test'...
+[info] 
+[debug] [2018-08-01T01:02:53.890Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/875835243480/clients/_:getWebAppConfig  
+  
+ Tue Jul 31 2018 18:02:53 GMT-0700 (PDT)
+[debug] [2018-08-01T01:02:54.460Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist/angular-test
+[info] ✔  hosting: Local server: http://localhost:5000
+
