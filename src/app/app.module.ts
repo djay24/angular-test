@@ -11,6 +11,7 @@ import { TodoComponent } from './todo/todo.component';
 import { HeroComponent } from './hero/hero.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { AmiibosComponent } from './amiibos/amiibos.component';
+import { AmiiboComponent } from './amiibo/amiibo.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AmiibosComponent } from './amiibos/amiibos.component';
     TodoComponent,
     HeroComponent,
     HeroDetailComponent,
-    AmiibosComponent
+    AmiibosComponent,
+    AmiiboComponent
   ],
   imports: [
     BrowserModule,

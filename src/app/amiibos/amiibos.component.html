@@ -6,9 +6,28 @@
       <h3 class="text-center">{{amiibo.name}}</h3>
       <p class="text-center" >From: {{amiibo.gameSeries}}</p>
       <div class="text-center">
-        <button class="btn btn-info">View</button>
+        <button class="btn btn-info" [routerLink]="['/amiibo/', amiibo.tail]">View</button>
       </div>
      </div>
     </div>
+    <div class="text-center">
+    <ul class="pagination" *ngIf="pager.pages && pager.pages.length" >
+      <li [ngClass]="{disabled: pager.currentPage === 1}" >
+        <a (click)="setPage(1)">First</a>
+      </li>
+      <li [ngClass]="{disabled: pager.currentPage === 1}">
+        <a (click)="setPage(pager.currentPage - 1)">Back</a>
+      </li>
+      <li *ngFor="let page of pager.pages" [ngClass]="{active: pager.currentPage == page}" >
+        <a (click)="setPage(page)">{{page}}</a>
+      </li>
+      <li [ngClass]="{disabled: pager.currentPage === pager.pageCount}">
+        <a (click)="setPage(pager.currentPage + 1)">Next</a>
+      </li>
+      <li [ngClass]="{disabled: pager.currentPage === pager.pageCount}">
+        <a (click)="setPage(pager.pagesCount)">Last</a>
+      </li>
+    </ul>
+  </div>
   </div>
 </div>
