@@ -20,6 +20,9 @@ export class AmiiboService {
   }
 
   getAmiibo(tail: string): Observable<Amiibo> {
-    return this.http.get<Amiibo>(`${this.apiUrl}`)
+    return this.http.get<Amiibo>(`${this.apiUrl}amiibo/?tail=${tail}`);
+  }
+  getFilteredAmiibos(category: string, value: string): Observable<Amiibo[]> {
+    return this.http.get<Amiibo[]>(`${this.apiUrl}amiibo/?${category}=${value}`)
   }
 }

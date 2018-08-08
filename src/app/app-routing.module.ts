@@ -15,7 +15,8 @@ const routes: Routes = [
   { path: 'hero', component: HeroComponent },
   { path: 'hero/:id', component: HeroDetailComponent },
   { path: 'amiibos', component: AmiibosComponent },
-  { path: 'amiibo/:id', component: AmiibosComponent}
+  { path: 'amiibo/:id', component: AmiiboComponent},
+  { path: 'amiibos/:category/:value', component: AmiibosComponent }
 ];
 
 @NgModule({
